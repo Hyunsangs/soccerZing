@@ -1,15 +1,17 @@
 {
   "expo": {
-    "name": "expo-init",
-    "slug": "expo-init",
+    "name": "SoccerZing",
+    "slug": "soccerzing",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.soccerzing.app"
     },
     "android": {
+      "package": "com.soccerzing.app",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -20,6 +22,22 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "sounds": [
+            "./assets/sounds/goal.caf",
+            "./assets/sounds/var.caf",
+            "./assets/sounds/yellow_card.caf",
+            "./assets/sounds/red_card.caf",
+            "./assets/sounds/kickoff.caf",
+            "./assets/sounds/halftime.caf",
+            "./assets/sounds/fulltime.caf"
+          ]
+        }
+      ]
+    ]
   }
 }
